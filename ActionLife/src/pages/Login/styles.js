@@ -13,15 +13,15 @@ export const logologin = styled.div`
 
 export const AsideContainer = styled.div`
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   top: 0;
   left: 0;
   z-index: -1;
   background-image: url(${props => props.background});
   background-size: cover;
   background-position: center;
-  margin-top: 150px;
+  margin-top: 0;
 `;
 
 export const LoginContainer = styled.div`

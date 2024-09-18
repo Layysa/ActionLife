@@ -18,9 +18,9 @@ const Login = () => {
         <S.telalogin>
         <S.logologin>
                 <img src={logo} className="background" alt="" />
-            </S.logologin>       
+            </S.logologin>
         <S.AsideContainer>
-                <img src={ondas} className="background" alt="" />
+        {/* aqui seria a onda */}
             </S.AsideContainer>
         <S.LoginContainer>
             <S.Form onSubmit={handleLogin}>
