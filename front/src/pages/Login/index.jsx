@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import * as S from './styles';
 
+import ondas from '../../assets/svg/ondas.svg'
+import logo from '../../assets/svg/logo.svg'
+
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -12,6 +15,13 @@ const Login = () => {
     };
 
     return (
+        <S.telalogin>
+        <S.logologin>
+                <img src={logo} className="background" alt="" />
+            </S.logologin>
+        <S.AsideContainer>
+        {/* aqui seria a onda */}
+            </S.AsideContainer>
         <S.LoginContainer>
             <S.Form onSubmit={handleLogin}>
                 <S.Title>Login</S.Title>
@@ -35,6 +45,7 @@ const Login = () => {
                 <S.LinkText>Não possui conta? Cadastre-se</S.LinkText>
             </S.Form>
         </S.LoginContainer>
+        </S.telalogin>
     );
 };
 
