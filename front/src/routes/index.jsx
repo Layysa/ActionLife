@@ -3,7 +3,8 @@ import { createBrowserRouter } from 'react-router-dom';
 import Home from '../pages/Home/index';
 import Login from '../pages/Login/index';
 import About from '../pages/About/index';
-import Chatbot from '../pages/Chatbot';
+import Chatbot from '../pages/Chatbot/index';
+import Cadastro from '../pages/Cadastro/index';
 
 export const router = createBrowserRouter([
     {
@@ -22,4 +23,8 @@ export const router = createBrowserRouter([
         path: '/Chatbot',
             element: <Chatbot />,
         },
+    {
+        path: '/Cadastro',
+            element: <Cadastro />,
+    },
 ]);
