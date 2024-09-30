@@ -5,6 +5,7 @@ export const ChatbotContainer = styled.div` // Background
   height: 100vh;
   background-color: #1e1e1e; // Cor de fundo escura
   font-family: Arial, sans-serif;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); // Sombra mais escura
 `;
 
 export const Sidebar = styled.div` // Barra lateral esquerda
@@ -29,7 +30,7 @@ export const SidebarTitle = styled.h2` // Títulos
 
 export const SidebarMessage = styled.p` // Textos barra
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 16px;
   color: #bfbfbf; // Cor cinza claro para texto
   line-height: 1.6;
 `;
@@ -47,11 +48,9 @@ export const ChatContent = styled.div` // Elementos do chat
 
 export const ChatBox = styled.div`
   width: 15px 20px;
-  margin-bottom: 780px;
-  background-color: #3d3d3d; // Fundo da box do chat mais escuro
-  border-radius: 10px;
+  margin-bottom: 700px;
+  border-radius: 20px;
   padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); // Sombra escura
   color: #fff; // Texto branco na box de chat
 `;
 
@@ -60,17 +59,15 @@ export const InputContainer = styled.div` // Contêiner do input e botão
   justify-content: center; // Centraliza o input e o botão
   align-items: flex-start; // Alinha o botão ao topo da caixa de texto
   padding: 15px;
-  background-color: #1e1e1e;
-  border-top: 1px solid #555; // Borda sutil entre a área de texto e o chat
 `;
 
 export const Input = styled.input` // Input (caixa de texto)
   width: 700px; // Caixa de texto com 700px da largura
-  padding: 10px;
+  padding: 15px;
   background-color: #333;
   color: #fff; // Texto branco
   border: 1px solid #555;
-  border-radius: 20px;
+  border-radius: 25px;
   font-size: 16px;
   outline: none;
   margin-right: 10px;
@@ -88,7 +85,7 @@ export const SendButton = styled.button` // Botão de envio
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: center; // Move o botão um pouco para o topo
+  margin-top: 5px; // Move o botão um pouco para o topo
   transition: background-color 0.3s;
 
   &:hover {

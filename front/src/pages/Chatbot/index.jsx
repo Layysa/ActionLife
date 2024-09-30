@@ -1,8 +1,13 @@
 import React from 'react';
 import * as S from './styles'; // Importando os estilos como S
+import logoP from '../../assets/svg/logoP.svg';
+import Navbar from '../../components/Navbar';
 
 const Chatbot = () => {
   return (
+    <>
+    <Navbar/> 
+
     <S.ChatbotContainer>
       <S.Sidebar>
         <S.SidebarSection>
@@ -22,7 +27,7 @@ const Chatbot = () => {
 
       <S.ChatContent>
         <S.ChatBox>
-          <img src="chat-icon-placeholder.png" alt="Chat Icon" style={{ width: '150px', height: '150px', borderRadius: '50%' }} />
+          <img src={logoP} alt="Chat Icon"/>
         </S.ChatBox>
         <S.InputContainer>
           <S.Input type="text" placeholder="Escreva aqui..." />
@@ -30,5 +35,7 @@ const Chatbot = () => {
         </S.InputContainer>
       </S.ChatContent>
     </S.ChatbotContainer>
+    </>
   );
 };
+export default Chatbot;
