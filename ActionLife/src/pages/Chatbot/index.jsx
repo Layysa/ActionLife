@@ -7,16 +7,16 @@ const Chatbot = () => {
       <S.Sidebar>
         <S.SidebarSection>
           <S.SidebarTitle>Hoje</S.SidebarTitle>
-          <S.SidebarMessage>Tomei leite estragado ontem e minhas fezes estão estranhas. O que faço?</S.SidebarMessage>
-          <S.SidebarMessage>Receitas para um café da manhã reforçado.</S.SidebarMessage>
+          <S.SidebarMessage>Quantas calorias posso ganhar por dia?</S.SidebarMessage>
+          <S.SidebarMessage>Receitas para um café da manhã reforçado e com poucas KL</S.SidebarMessage>
         </S.SidebarSection>
 
         <S.SidebarSection>
           <S.SidebarTitle>Ontem</S.SidebarTitle>
-          <S.SidebarMessage>PREGUNTA 3</S.SidebarMessage>
-          <S.SidebarMessage>PREGUNTA 4</S.SidebarMessage>
-          <S.SidebarMessage>PREGUNTA 5</S.SidebarMessage>
-          <S.SidebarMessage>PERGUNTA 6</S.SidebarMessage>
+          <S.SidebarMessage>Como saber a quatia de água em litros para 50kg?</S.SidebarMessage>
+          <S.SidebarMessage>Exercício tira bucho</S.SidebarMessage>
+          <S.SidebarMessage>Dieta detox</S.SidebarMessage>
+          <S.SidebarMessage>Tenho 1,65 e peso 78,300kg, calcule o meu IMC</S.SidebarMessage>
         </S.SidebarSection>
       </S.Sidebar>
 
@@ -26,11 +26,9 @@ const Chatbot = () => {
         </S.ChatBox>
         <S.InputContainer>
           <S.Input type="text" placeholder="Escreva aqui..." />
-          <S.SendButton><p> </p></S.SendButton>
+          <S.SendButton><p>Enviar</p></S.SendButton>
         </S.InputContainer>
       </S.ChatContent>
     </S.ChatbotContainer>
   );
 };
-
-export default Chatbot;
