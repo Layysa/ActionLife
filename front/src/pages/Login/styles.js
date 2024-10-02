@@ -11,17 +11,17 @@ export const logologin = styled.div`
   align-items: center;
 `;
 
-export const AsideContainer = styled.div`
-  position: absolute;
-  width: 100vh;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-image: url(${props => props.background});
-  background-size: cover;
-  background-position: center;
-  margin-top: 0;
+export const AsideContainer = styled.aside`
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: transparent;
+    img {
+        width: 100%;
+        height: auto;
+    }
 `;
 
 export const LoginContainer = styled.div`

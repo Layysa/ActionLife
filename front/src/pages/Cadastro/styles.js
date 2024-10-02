@@ -6,7 +6,8 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to top, #4c00c9, #271c71);
+  background: #353535;
+  position: relative;
 `;
 
 // Estilo do Forms
@@ -14,7 +15,7 @@ export const Form = styled.div`
   background-color: #fff;
   border-radius: 15px;
   padding: 40px;
-  //width: 320px;
+  /* width: 320px; */
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -28,13 +29,32 @@ export const FormWrapper = styled.div`
   width: 400px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  z-index: 2; /* Colocar o formulário à frente */
 `;
 
 // Estilo para o logo 
-export const Logo = styled.h1`
-  font-size: 24px;
-  color: #4c00c9;
-  margin-bottom: 20px;
+export const Logo = styled.div`
+  position: absolute;
+  top: 0%; 
+  left: 50%;
+  transform: translateX(-50%);
+  img {
+    width:default; 
+  }
+`;
+
+// Estilo do WavesWrapper para ficar atrás
+export const WavesWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* Colocar as ondas atrás */
+  background-color: transparent;
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 // Título do formulário

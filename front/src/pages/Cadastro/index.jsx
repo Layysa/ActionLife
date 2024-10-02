@@ -6,14 +6,23 @@ import {
   Form, 
   Input, 
   Button, 
-  Title 
+  Title,
+  WavesWrapper
 } from './styles';
+
+import logo from '../../assets/svg/logo.svg'
+import waves from '../../assets/svg/waves.svg'
 
 const Register = () => {
   return (
     <Container>
+      <WavesWrapper>
+        <img src={waves} className='background' alt='' />
+      </WavesWrapper>
       <FormWrapper>
-        <Logo>Action Life</Logo>
+        <Logo>
+          <img src={logo} className='background' alt='' />
+        </Logo>
         <Form>
           <Title>Cadastro</Title>
           <Input type="text" placeholder="Nome completo:" />
