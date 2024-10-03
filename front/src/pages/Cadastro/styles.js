@@ -14,7 +14,7 @@ export const Form = styled.div`
   background-color: #fff;
   border-radius: 15px;
   padding: 40px;
-  //width: 320px;
+  width: 320px;
   align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;

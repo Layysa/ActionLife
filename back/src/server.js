@@ -18,6 +18,7 @@ app.listen(PORT, () => {
     console.log(`Funcionando na porta ${PORT}`)
 })
 
+
 // rotas para buscar todos os itens
 
 app.get('/', async (req, res) => {
@@ -30,5 +31,23 @@ app.get('/', async (req, res) => {
 
     }
 })
+
+
+app.post('/insertitem', async (req, res) => {
+    const {nome, email, senha, nascimento} = req.body
+
+    // Log dos dados recebidos no backend
+    console.log('Dados recebidos do frontend:', req.body);
+
+    try{ 
+        const result = await insertItem(nome, email, nascimento, senha)
+        console.log('Resultado da inserção:', result); // Log do resultado da inserção
+        res.status(201).json(result)
+
+    }catch(error){ 
+        console.error(`Erro ao inserir itens: ${error.message}`); // Log detalhado
+        res.status(500).json({error: error.message}); // Enviando o erro ao cliente
+    }
+});
 
 
