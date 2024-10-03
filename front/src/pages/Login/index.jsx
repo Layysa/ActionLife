@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './styles';
 
-import ondas from '../../assets/svg/ondas.svg'
+import waves from '../../assets/svg/waves.svg'
 import logo from '../../assets/svg/logo.svg'
 
 const Login = () => {
@@ -18,10 +18,10 @@ const Login = () => {
         <S.telalogin>
         <S.logologin>
                 <img src={logo} className="background" alt="" />
-            </S.logologin>
+        </S.logologin>
         <S.AsideContainer>
-        {/* aqui seria a onda */}
-            </S.AsideContainer>
+            <img src={waves} className='backgroud' alt='' />
+        </S.AsideContainer>
         <S.LoginContainer>
             <S.Form onSubmit={handleLogin}>
                 <S.Title>Login</S.Title>

@@ -8,10 +8,16 @@ import {
   Form, 
   Input, 
   Button, 
-  Title 
+  Title,
+  WavesWrapper
 } from './styles';
 
+<<<<<<< HEAD
   
+=======
+import logo from '../../assets/svg/logo.svg'
+import waves from '../../assets/svg/waves.svg'
+>>>>>>> 59304669cb1f7d5e2fdda100fe194e4c0c767ed1
 
 const Register = () => {
 
@@ -56,9 +62,19 @@ async function handleSubmit(e) {
 
   return (
     <Container>
+      <WavesWrapper>
+        <img src={waves} className='background' alt='' />
+      </WavesWrapper>
       <FormWrapper>
+<<<<<<< HEAD
         <Logo>Action Life</Logo>
         <form onSubmit={handleSubmit}>
+=======
+        <Logo>
+          <img src={logo} className='background' alt='' />
+        </Logo>
+        <Form>
+>>>>>>> 59304669cb1f7d5e2fdda100fe194e4c0c767ed1
           <Title>Cadastro</Title>
           <Input type="text" placeholder="Nome completo:" value={nome} required onChange={(e) => setName(e.target.value)}/>
           <Input type="email" placeholder="E-mail:" value={email} required onChange={(e) => setEmail(e.target.value)}/>
