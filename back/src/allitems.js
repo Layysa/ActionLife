@@ -11,10 +11,10 @@ const getAllItems = async () => {
 
 }
 
-async function insertItem(nome, peso, altura, email) {
+async function insertItem(nome, email, nascimento, senha) {
     try{
-        const insertQuery = "INSERT INTO dado_usuario (nome, peso, altura, email) VALUES (?, ?, ?, ?)"
-        const values = [nome, peso, altura, email]
+        const insertQuery = "INSERT INTO dado_usuario (nome, email, nascimento, senha) VALUES (?, ?, ?, ?)"
+        const values = [nome, email, nascimento, senha]
         const [result] = await connection.execute(insertQuery, values)
         return result
     }
