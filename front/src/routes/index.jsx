@@ -5,6 +5,7 @@ import Login from '../pages/Login/index';
 import About from '../pages/About/index';
 import Chatbot from '../pages/Chatbot/index';
 import Cadastro from '../pages/Cadastro/index';
+import Cadastro_2 from '../pages/Cadastro_2/index'
 
 export const router = createBrowserRouter([
     {
@@ -27,4 +28,8 @@ export const router = createBrowserRouter([
         path: '/Cadastro',
             element: <Cadastro />,
     },
+    {
+        path: '/Informações',
+            element: <Cadastro_2/>,
+    }
 ]);
