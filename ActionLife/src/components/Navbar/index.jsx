@@ -10,11 +10,11 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" />
             </S.Logo>
             <S.Menu>
-                <S.MenuItem href="/">Home</S.MenuItem>
-                <S.MenuItem href="/about">About</S.MenuItem>
-                <S.MenuItem href="/services">Services</S.MenuItem>
-                <S.MenuItem href="/contact">Contact</S.MenuItem>
+                <S.MenuItem href="/">Inicio</S.MenuItem>
+                <S.MenuItem href="/about">Sobre Nós</S.MenuItem>
+                <S.MenuItem href="/services">Act</S.MenuItem>
             </S.Menu>
+            <S.EntrarButton href="/login">Entrar</S.EntrarButton>
         </S.Nav>
     );
 };
