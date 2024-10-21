@@ -1,14 +1,19 @@
 import React from 'react';
-import * as S from './styles';
+import * as S from './styles'; // Importando os estilos
+
+import iniciohome from '../../assets/svg/iniciohome.svg';
+import parteroxa from '../../assets/svg/parteroxa.svg';
+import caixas from '../../assets/svg/caixas.svg';
 
 import Navbar from '../../components/Navbar';
 
 export default function Home() {
     return (
-        <pai>
+        <S.Pai>
             <Navbar />
-
-            <h1>oi</h1>
-        </pai>
+            <S.InicioHomeImage src={iniciohome} alt="Início Home" />
+            <S.Parteroxa src={parteroxa} alt="" />
+            <S.Caixainicio src={caixas} alt="" />
+        </S.Pai>
     );
 }

@@ -84,9 +84,9 @@ async function handleSubmit(e) {
         <img src={waves} className='background' alt='' />
       </WavesWrapper>
       <FormWrapper>
-          <Logo>
-            <img src={logo} className='background' alt='' />
-          </Logo>
+        <Logo>
+        <img src={logo} className='background' alt='' />
+        </Logo>
         <form onSubmit={handleSubmit}>
           <Title>Cadastro</Title>
           <Input type="text" placeholder="Nome completo:" value={nome} required onChange={(e) => setName(e.target.value)}/>
