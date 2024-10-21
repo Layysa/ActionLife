@@ -2,5 +2,8 @@
   "dependencies": {
     "react-router-dom": "^6.26.2",
     "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
   }
 }

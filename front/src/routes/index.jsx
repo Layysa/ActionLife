@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
             element: <Cadastro />,
     },
     {
-        path: '/Informações',
+        path: '/Cadastro_2',
             element: <Cadastro_2/>,
     }
 ]);
