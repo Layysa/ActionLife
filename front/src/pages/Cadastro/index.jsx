@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import api from '../../api'
+import api from '../../api';
 import React from 'react';
 import {
   Container, 
@@ -11,10 +11,27 @@ import {
   Title,
   WavesWrapper
 } from './styles';
+import logo from '../../assets/svg/logo.svg';
+import waves from '../../assets/svg/waves.svg';
+//import * as yup from 'yup';
 
+// Validação de cadastro
+/*const validationRegister = yup.object().shape({
+  email: yup
+  .string()
+  .email("E-mail inválido!")
+  .required("O e-mail é obrigatório"),
+  password: yup
+  .string()
+  .min(8, "A senha deve ter pelo menos 8 caracteres")
+  .required("A senha é obrigatório"),
 
-import logo from '../../assets/svg/logo.svg'
-import waves from '../../assets/svg/waves.svg'
+  confirmation: yup
+  .string()
+  .oneOf([yup.ref('password'), null], 'As senhas são diferentes')
+  .required("A confirmação é obrigatória"),
+
+})*/
 
 const Register = () => {
 
@@ -23,8 +40,8 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmpassword, setConfirmpassword] = useState('');
-  const [nascimento, setDate] = useState('');
 
+  
  // Função para tratar o envio do formulário
 async function handleSubmit(e) {
   e.preventDefault();
@@ -37,19 +54,23 @@ async function handleSubmit(e) {
 
   try {
       // Exibir os dados no console para verificação antes do envio
-      console.log({ nome, email, nascimento, senha: password });
+      console.log({ nome, email, senha: password });
 
       // Enviar os dados para a API
       const response = await api.post('/insertitem', {
           nome,
           email,
-          nascimento,
           senha: password, // envio de senha
       });
+
+      setName('')
+      setEmail('')
+      setPassword('')
+      setConfirmpassword('')
       
       console.log('Resposta da API:', response); // Log da resposta da API
       alert('Cadastro realizado com sucesso!');
-  } catch (error) {
+  }catch (error) {
       console.error('Erro ao inserir dados', error);
       alert('Ocorreu um erro ao realizar o cadastro. Tente novamente.');
   }
@@ -70,9 +91,8 @@ async function handleSubmit(e) {
           <Title>Cadastro</Title>
           <Input type="text" placeholder="Nome completo:" value={nome} required onChange={(e) => setName(e.target.value)}/>
           <Input type="email" placeholder="E-mail:" value={email} required onChange={(e) => setEmail(e.target.value)}/>
-          <Input type="password" placeholder="Senha:" autocomplete="new-password" value={password} required onChange={(e) => setPassword(e.target.value)}/>
-          <Input type="password" placeholder="Confirmar senha:" autocomplete="new-password" value={confirmpassword}  required onChange={(e) => setConfirmpassword(e.target.value)} />
-          <Input type="date" placeholder="Data de nascimento: dd/mm/aaaa" value={nascimento}  required onChange={(e) => setDate(e.target.value)}/>
+          <Input type="password" placeholder="Senha:" autoComplete="new-password" value={password} required onChange={(e) => setPassword(e.target.value)}/>
+          <Input type="password" placeholder="Confirmar senha:" autoComplete="new-password" value={confirmpassword}  required onChange={(e) => setConfirmpassword(e.target.value)} />
           <Button type="submit">Cadastrar</Button>
         </form>
       </FormWrapper>

@@ -4,7 +4,13 @@ const express = require('express')
 // Usado para permirtir que aplicações web que estão rodando em um domínio (origem) acessem recursos em outro domínio.
 const cors = require('cors') 
 
-const {getAllItems, insertItem} = require('./allitems')
+// Usado para criptorgafar senhas dos usuarios
+const bcrypt = require('bcrypt'); 
+
+
+const {getAllItems, insertItem} = require('./allitems');
+const { connect } = require('./connection');
+const connection = require('./connection');
 
 const app = express() 
 app.use(express.json())
@@ -19,7 +25,7 @@ app.listen(PORT, () => {
 })
 
 
-// rotas para buscar todos os itens
+
 
 app.get('/', async (req, res) => {
     try{
@@ -34,13 +40,13 @@ app.get('/', async (req, res) => {
 
 
 app.post('/insertitem', async (req, res) => {
-    const {nome, email, senha, nascimento} = req.body
+    const {nome, email, senha} = req.body
 
     // Log dos dados recebidos no backend
     console.log('Dados recebidos do frontend:', req.body);
 
     try{ 
-        const result = await insertItem(nome, email, nascimento, senha)
+        const result = await insertItem(nome, email, senha)
         console.log('Resultado da inserção:', result); // Log do resultado da inserção
         res.status(201).json(result)
 
@@ -50,4 +56,33 @@ app.post('/insertitem', async (req, res) => {
     }
 });
 
+
+/*
+// verificação de login
+app.post('/login', (req, res) => {
+    const {email, senha} = req.body
+
+    const db_query = "SELECT * FROM cadastro WHERE=?"
+    connection.query(db_query, email, (err, result) => {
+        if(err){
+            res.send(err)
+        }
+
+        if (result.length > 0){
+            bcrypt.compare(senha, result[0].senha, (error, response) => {
+                if(error){
+                    res.send(error)
+                }
+                if (response === true){
+                    res.send(response)
+                } else {
+                    res.send({ msg: "Email ou senha incorreto!"})
+                }
+            })
+        } else {
+            res. send({msg: "Usuário não registrado!"})
+        }  
+    })
+})
+*/
 

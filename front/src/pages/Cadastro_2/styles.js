@@ -48,6 +48,35 @@ export const Input = styled.input`
   }
 `;
 
+// Estilos para os selecionadores
+export const Select = styled.select`
+ width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+
+  &:focus {
+    border-color: #635de0;
+  }
+`;
+
+export const Option = styled.option`
+width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+
+  &:focus {
+    border-color: #635de0;
+  }
+`;
+
 // Estilos para o botão
 export const Button = styled.button`
   width: 100%;

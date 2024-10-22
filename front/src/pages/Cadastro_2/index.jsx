@@ -4,6 +4,7 @@ import { Container, Form, Input, Button, Title, Logo, Waves } from './styles';
 
 import logo from '../../assets/svg/logo.svg';
 import waves from '../../assets/svg/waves.svg';
+import api from '../../api';
 
 function App() {
     const navigate = useNavigate(); // Usando useNavigate
