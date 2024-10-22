@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './styles'; // Importando os estilos como S
-
-import Navbarlogin from '../../components/Navbarlogin';
+import logoP from '../../assets/svg/logoP.svg';
+import Navbar from '../../components/Navbar';
 
 // Componente de mensagem (usuário e ACT)
 const Message = ({ sender, text }) => (
@@ -15,7 +15,7 @@ const Message = ({ sender, text }) => (
     </S.MessageContainer>
 );
 
-const Chatbotlogin = () => {
+const Chatbot = () => {
     const [messages, setMessages] = useState([]); // Estado para armazenar as mensagens
     const [inputValue, setInputValue] = useState(''); // Estado do input do usuário
 
@@ -133,7 +133,7 @@ const Chatbotlogin = () => {
 
     return (
         <>
-            <Navbarlogin />
+            <Navbar />
             <S.ChatbotContainer>
                 <S.Sidebar>
                     <S.SidebarSection>
@@ -187,4 +187,4 @@ const Chatbotlogin = () => {
     );
 };
 
-export default Chatbotlogin;
+export default Chatbot;

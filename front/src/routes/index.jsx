@@ -1,17 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import Home from '../pages/Home/index';
+import Homelogin from '../pages/Homelogin/index';
 import Login from '../pages/Login/index';
 import About from '../pages/About/index';
 import Chatbot from '../pages/Chatbot/index';
 import Cadastro from '../pages/Cadastro/index';
 import Cadastro_2 from '../pages/Cadastro_2/index';
-import Perfil from '../pages/Perfil/index'
+import Perfil from '../pages/Perfil/index';
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Home />,
+    },
+    {
+        path: '/Homelogin',
+        element: <Homelogin />,
     },
     {
         path: '/login',
@@ -23,18 +28,18 @@ export const router = createBrowserRouter([
     },
     {
         path: '/Chatbot',
-            element: <Chatbot />,
-        },
+        element: <Chatbot />,
+    },
     {
         path: '/Cadastro',
-            element: <Cadastro />,
+        element: <Cadastro />,
     },
     {
         path: '/Informações',
-            element: <Cadastro_2/>,
+        element: <Cadastro_2 />,
     },
     {
         path: '/Perfil',
-            element: <Perfil/>,
-    }
+        element: <Perfil />,
+    },
 ]);
