@@ -12,7 +12,7 @@ const Navbar = () => {
             <S.Menu>
                 <S.MenuItem href="/">Inicio</S.MenuItem>
                 <S.MenuItem href="/about">Sobre Nós</S.MenuItem>
-                <S.MenuItem href="/services">Act</S.MenuItem>
+                <S.MenuItem href="/login">Act</S.MenuItem>
             </S.Menu>
             <S.EntrarButton href="/login">Entrar</S.EntrarButton>
         </S.Nav>
