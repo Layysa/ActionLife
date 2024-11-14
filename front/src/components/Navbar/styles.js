@@ -4,7 +4,7 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 5px 48px;
+    padding: 10px 130px;
     background-color: #2b2b2b;
     color: white;
 `;

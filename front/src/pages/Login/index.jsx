@@ -42,7 +42,7 @@ const Login = () => {
                         Lembre-se
                     </S.Label>
                     <S.Button type="submit">Entrar</S.Button>
-                    <S.LinkText>Não possui conta? Cadastre-se</S.LinkText>
+                    <S.LinkText href= "/Cadastro">Não possui conta? Cadastre-se</S.LinkText>
                 </S.Form>
             </S.LoginContainer>
         </S.telalogin>
